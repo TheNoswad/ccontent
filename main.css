@@ -1,0 +1,144 @@
+*{
+    font-family: Pericles;
+    src: url(pericles.woff);
+}
+
+@font-face {
+    font-family: Pericles;
+    src: url(pericles.woff);
+}
+
+.btn-group button {
+    position: relative;
+    background-color: #000000;
+    /* Green background */
+    border: 2px solid rgb(105, 105, 105);
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 10px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+    font-size: large;
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none;
+    /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+.btn-group .itemicon {
+    position: absolute;
+    float: left;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fullstar {
+    height: 1em;
+    filter: invert(2%) sepia(66%) saturate(2485%) hue-rotate(3deg) brightness(108%) contrast(105%);
+}
+
+.halfstar {
+    height: 1em;
+    filter: invert(2%) sepia(66%) saturate(2485%) hue-rotate(3deg) brightness(108%) contrast(105%);
+    clip-path: inset(1em, 0.1em);
+    overflow: hidden;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropbtnright {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtnright:hover,
+.dropbtnright:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownright {
+    position: relative;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 0px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content-right {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 0px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdownright a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content-right a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdownright a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
