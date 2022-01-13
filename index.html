@@ -235,6 +235,7 @@
                 document.getElementById("list").innerHTML = "";
                 nextcursor = ""
                 loadXMLDoc();
+                updateFill()
             }
         }
 
@@ -248,6 +249,7 @@
                 document.getElementById("list").innerHTML = "";
                 nextcursor = ""
                 loadXMLDoc();
+                updateFill()
             }
         }
 
@@ -301,12 +303,15 @@
 
             if (offset >= height) {
                 console.log('At the bottom');
-                loadXMLDoc()
+                loadXMLDoc();
+                updateFill()
             }
         };
 
         // Checks for whitespece on page load. Hacky fix for mobile
-        window.onload = function () {
+        window.onload = updateFill();
+
+        function updateFill() {
             var d = document.documentElement;
             var offset = d.scrollTop + window.innerHeight;
             var height = d.offsetHeight;
