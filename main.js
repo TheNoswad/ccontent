@@ -87,11 +87,16 @@ var url = "http://scresdir.appspot.com/resource";
         function loadXMLDoc() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
+                var status = xhttp.status;
+                if (status === 0 || (status >= 200 && status < 400)) {
                     // document.getElementById("demo").innerHTML =
                     //     this.responseText;
                     console.log(this.responseXML);
                     setList(this)
+                }
+                else {
+                    alert("This page requires the CORS Anywhere proxy. Enable it at https://cors-anywhere.herokuapp.com/");
+                    window.open("https://cors-anywhere.herokuapp.com/", "_blank")
                 }
             };
 
